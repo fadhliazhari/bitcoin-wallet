@@ -22,4 +22,4 @@ test:
 
 # run project
 run:
-    cargo run
+    $Env:RUST_LOG="info"; cargo run
