@@ -1,0 +1,18 @@
+exclude: "^$"
+fail_fast: false
+default_stages: [pre-commit, pre-push]
+repos:
+
+  - repo: https://github.com/commitizen-tools/commitizen
+    rev: v4.13.7
+    hooks:
+      - id: commitizen
+        stages: 
+          - commit-msg
+
+  - repo: https://github.com/doublify/pre-commit-rust
+    rev: v1.0
+    hooks:
+      - id: fmt
+      - id: cargo-check
+      - id: clippy
